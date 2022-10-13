@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display+SC:ital@1&family=Poppins:wght@300&family=Qwitcher+Grypen:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./img/logo-codepen.svg" type="image/x-icon">
+
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+
+  </head>
+  <body>
+    <main>
+    <div class="container">
+        <h1 >
+            <img src="./img/cubo.png" alt="cubo" width="30" height="30">
+            Cubo decodificador</h1>
+        <h3>Cifra De César & Base 64</h3>
+        <form action="#">
+            <textarea name="mensagem" id="mensagem" cols="50" rows="4"
+              placeholder="Digite sua mensagem..."></textarea>
+
+                <label id="selecione" for="select"></label>
+                <select name="select" class="select" id="select">
+                    <option value="selecione" disabled selected>Selecione</option>
+                    <option value="base64">Base64</option>
+                    <option value="cifra">Cifra de césar</option> 
+                </select>
+
+                    <div class="chave-container">
+                        <label class="chave" for="range">Escolha a Chave</label>
+                        <div class="slider-range">
+                            <input type="range" value="1" min="1" max="26" class="range" id="range"
+                                oninput="rangenumber.value=value" />
+                            <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
+                        </div>
+</div>
+
+                        <div class="radio-button">
+                            <div class="radio">
+                                <input type="radio" name="codificar" id="codificar" value="codificar" checked />
+                                <label for="codificar">Codificar</label>
+                            </div>
+
+                            <div class="radio">
+                                <input type="radio" name="codificar" id="decodificar" value="decodificar" />
+                                <label for="decodificar">Decodificar</label>
+                            </div>
+                        </div>
+
+
+                        <textarea id="resultado" class="mensagem resultado" cols="50" rows="4" readonly
+                        placeholder="Mensagem Criptografada"></textarea>
+                    <div class="btn">
+                        <button>Codificar Mensagem</button>               
+    </div>
+</form>
+
+
+    <div class="icons">
+        <a href="https://www.github.com/gooddri"><ion-icon name="logo-github"></ion-icon></a>
+        <a href="https://www.linkedin.com/adriele-garcia-ddri"><ion-icon name="logo-linkedin"></ion-icon></a>
+    </div>
+ </main> 
+ 
+
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  </body>
+</html>
